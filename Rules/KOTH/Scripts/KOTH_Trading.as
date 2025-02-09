@@ -147,7 +147,7 @@ void onPlayerDie(CRules@ this, CPlayer@ victim, CPlayer@ killer, u8 customData)
 					plcl = killer.getBlob().getName();
 				}
 
-				if (customData != Hitters::keg && customData != GruhshaHitters::tile_entity) {
+				if (customData != Hitters::keg) {
 					killer.server_setCoins(killer.getCoins() + (coinsOnKillAdd * Maths::Pow(killstreakFactor, killer.get_u8("killstreak"))) * getArcherMultiplier(plcl) * getMultiplier());
 					//printf("Give coins KILL");
 				}

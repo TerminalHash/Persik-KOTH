@@ -43,19 +43,6 @@ void onInit(CBlob@ this)
 		AddRequirement(s.requirements, "coin", "", "Coins", 45);
 	}
 	{
-		ShopItem@ s = addShopItem(this, Names::stickybomb, "$stickybombs$", "mat_stickybombs", Descriptions::stickybombdesc, true);
-		AddRequirement(s.requirements, "coin", "", "Coins", 35);
-	}
-	{
-		ShopItem@ s = addShopItem(this, Names::icebomb, "$icebomb$", "mat_icebombs", Descriptions::icebombdesc, true);
-		AddRequirement(s.requirements, "coin", "", "Coins", 45);
-	}
-	{
-		ShopItem@ s = addShopItem(this, Names::goldenmine, getTeamIcon("golden_mine", "GoldenMine.png", team_num, Vec2f(16, 16), 1), "golden_mine", Descriptions::goldenminedesc, true);
-		AddRequirement(s.requirements, "coin", "", "Coins", CTFCosts::golden_mine);
-		AddRequirement(s.requirements, "no more", "golden_mine", "Golden Mine", 2);
-	}
-	{
 		ShopItem@ s = addShopItem(this, "Drill", "$drill$", "drill", Descriptions::drill, false);
 		AddRequirement(s.requirements, "coin", "", "Coins", 15);
 		s.spawnToInventory = true;
@@ -70,10 +57,6 @@ void onInit(CBlob@ this)
 	{
 		ShopItem@ s = addShopItem(this, "Bomb Arrows", "$mat_bombarrows$", "mat_bombarrows", Descriptions::bombarrows, true);
 		AddRequirement(s.requirements, "coin", "", "Coins", 50);
-	}
-	{
-		ShopItem@ s = addShopItem(this, Names::stonearrow, "$stoneblockarrows$", "mat_stoneblockarrows", Descriptions::stonearrowdesc, true);
-		AddRequirement(s.requirements, "coin", "", "Coins", 30);
 	}
 	{
 		ShopItem@ s = addShopItem(this, "Crate (wood)", getTeamIcon("crate", "Crate.png", team_num, Vec2f(32, 16), 5), "crate", Descriptions::crate, false);
