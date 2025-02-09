@@ -32,12 +32,12 @@ void onTick(CRules@ this) {
     bool isStalemate = getRules().get_bool("koth_stalemate");
 
     if (isControlPointCappedByBlue) {
-        if (BlueCP && this.get_s32("control_timer_blue") > 0 && !isStalemate) {
+        if (this.get_s32("control_timer_blue") > 0) {
             this.sub_s32("control_timer_blue", 1);
             this.Sync("control_timer_blue", true);
         }
     } else if (isControlPointCappedByRed) {
-        if (RedCP && this.get_s32("control_timer_red") > 0 && !isStalemate) {
+        if (this.get_s32("control_timer_red") > 0) {
             this.sub_s32("control_timer_red", 1);
             this.Sync("control_timer_red", true);
         }

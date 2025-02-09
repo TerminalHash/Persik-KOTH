@@ -77,7 +77,7 @@ void onTick (CBlob@ this) {
     // logic for blobs in hold sector
     if (getMap().getBlobsInSector(getMap().getSector("hold zone"), overlapping)) {
         for (int i = 0; i < overlapping.length; ++i) {
-            if (overlapping[i].hasTag("player") && overlapping[i].getTeamNum() == 0) {
+            if (overlapping[i].hasTag("player") && !overlapping[i].hasTag("dead") && overlapping[i].getTeamNum() == 0) {
                 blue_player_overlapping = true;
 
 				// give coins when players of that team actually holding on point
@@ -87,7 +87,7 @@ void onTick (CBlob@ this) {
 				}
             }
 
-            if (overlapping[i].hasTag("player") && overlapping[i].getTeamNum() == 1) {
+            if (overlapping[i].hasTag("player") && !overlapping[i].hasTag("dead") && overlapping[i].getTeamNum() == 1) {
                 red_player_overlapping = true;
 
 				// give coins when players of that team actually holding on point

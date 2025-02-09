@@ -56,7 +56,7 @@ void addCommonBuilderBlocks(BuildBlock[][]@ blocks, int team_num = 0, const stri
 
 	BuildBlock[] page_0;
 	blocks.push_back(page_0);
-	{
+	/*{
 		BuildBlock b(CMap::tile_castle, "stone_block", "$stone_block$", "Stone Block\nBasic building block");
 		AddRequirement(b.reqs, "blob", "mat_stone", "Stone", BuilderCosts::stone_block);
 		blocks[0].push_back(b);
@@ -75,22 +75,22 @@ void addCommonBuilderBlocks(BuildBlock[][]@ blocks, int team_num = 0, const stri
 		BuildBlock b(CMap::tile_wood, "wood_block", "$wood_block$", "Wood Block\nCheap block\nwatch out for fire!");
 		AddRequirement(b.reqs, "blob", "mat_wood", "Wood", BuilderCosts::wood_block);
 		blocks[0].push_back(b);
-	}
+	}*/
 	{
 		BuildBlock b(CMap::tile_wood_back, "back_wood_block", "$back_wood_block$", "Back Wood Wall\nCheap extra support");
 		AddRequirement(b.reqs, "blob", "mat_wood", "Wood", BuilderCosts::back_wood_block);
 		blocks[0].push_back(b);
 	}
-	{
+	/*{
 		BuildBlock b(0, "wooden_door", getTeamIcon("wooden_door", "1x1WoodDoor.png", team_num, Vec2f(16, 8)), "Wooden Door\nPlace next to walls");
 		AddRequirement(b.reqs, "blob", "mat_wood", "Wood", BuilderCosts::wooden_door);
 		blocks[0].push_back(b);
 	}
-	/*{
+	{
 		BuildBlock b(0, "trap_block", getTeamIcon("trap_block", "TrapBlock.png", team_num), "Trap Block\nOnly enemies can pass");
 		AddRequirement(b.reqs, "blob", "mat_stone", "Stone", BuilderCosts::trap_block);
 		blocks[0].push_back(b);
-	}*/
+	}
 	{
 		BuildBlock b(0, "bridge", getTeamIcon("bridge", "Bridge.png", team_num), "Trap Bridge\nOnly your team can stand on it");
 		AddRequirement(b.reqs, "blob", "mat_wood", "Wood", BuilderCosts::bridge);
@@ -105,14 +105,14 @@ void addCommonBuilderBlocks(BuildBlock[][]@ blocks, int team_num = 0, const stri
 		BuildBlock b(0, "wooden_platform", "$wooden_platform$", "Wooden Platform\nOne way platform");
 		AddRequirement(b.reqs, "blob", "mat_wood", "Wood", BuilderCosts::wooden_platform);
 		blocks[0].push_back(b);
-	}
+	}*/
 	{
 		BuildBlock b(0, "spikes", "$spikes$", "Spikes\nPlace on Stone Block\nfor Retracting Trap");
 		AddRequirement(b.reqs, "blob", "mat_stone", "Stone", BuilderCosts::spikes);
 		blocks[0].push_back(b);
 	}
 
-	if (CTF || SCTF || KOTH)
+	if (CTF || SCTF) //|| KOTH)
 	{
 		BuildBlock b(0, "building", "$building$", "Workshop\nStand in an open space\nand tap this button.");
 		AddRequirement(b.reqs, "blob", "mat_wood", "Wood", CTFCosts::workshop_wood);
