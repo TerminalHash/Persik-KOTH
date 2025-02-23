@@ -7,12 +7,12 @@
 
 const int coinsOnDamageAdd = 6;
 const int coinsOnAssistAdd = 8;
-const int coinsOnKillAdd = 0;
+const int coinsOnKillAdd = 2;
 
 // bonus for being an offensive builder
 const int coinsOnDamageAddBuilder = 7;
 const int coinsOnAssistAddBuilder = 9;
-const int coinsOnKillAddBuilder = 0;
+const int coinsOnKillAddBuilder = 4;
 
 const int coinsOnDeathLosePercent = 15;
 
