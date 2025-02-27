@@ -31,6 +31,9 @@ void onTick(CRules@ this) {
     bool isControlPointCappedByRed = getRules().get_bool("cp_controlled_red");
     bool isStalemate = getRules().get_bool("koth_stalemate");
 
+    // King of the Hill (KOTH) Mechanic
+    // If our current gamemode is KOTH, it will enable timer
+    // if (GetGamemode(this) == "KOTH")
     if (isControlPointCappedByBlue) {
         if (this.get_s32("control_timer_blue") > 0) {
             this.sub_s32("control_timer_blue", 1);
@@ -42,6 +45,7 @@ void onTick(CRules@ this) {
             this.Sync("control_timer_red", true);
         }
     }
+    //}
 
     // DEBUG
     if (getLocalPlayer() is null) return;

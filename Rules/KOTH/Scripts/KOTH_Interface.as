@@ -38,6 +38,11 @@ void onRender(CRules@ this)
     bool isControlPointCappedByRed = this.get_bool("cp_controlled_red");
 	bool isStalemate = getRules().get_bool("koth_stalemate");
 
+	// ControlPoints (CP) Interface
+	// points panel
+
+	// King of the Hill (KOTH) Interface
+	// if (GetGamemode(this) == "KOTH")
 	// main panel
 	GUI::DrawIcon("KOTH_Panel.png", 0, Vec2f(146,38), Vec2f(getScreenWidth() /2 - 145, getScreenHeight() / -2));
 
@@ -115,6 +120,7 @@ void onRender(CRules@ this)
 
 		GUI::DrawText(red_time_counter , Vec2f(getScreenWidth() / 2 + 10, getScreenHeight() /-2 + 5), SColor(255, 255, 255, 255));
 	}
+	//}
 	///////////////////////////////////////////////////////////
 
 	string propname = "koth spawn time " + p.getUsername();

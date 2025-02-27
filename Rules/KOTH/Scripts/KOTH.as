@@ -520,6 +520,7 @@ shared class KOTHCore : RulesCore
 		KOTHTeamInfo@ winteam = null;
 		s8 team_wins_on_end = -1;
 
+		// if (GetGamemode(getRules()) == "KOTH")
 		if (!getRules().hasTag("some team timer is zero")) {
 			for (uint team_num = 0; team_num < teams.length; ++team_num) {
 				KOTHTeamInfo@ team = cast < KOTHTeamInfo@ > (teams[team_num]);
@@ -554,6 +555,7 @@ shared class KOTHCore : RulesCore
 				@winteam = team_red;
 			}
 		}
+		//}
 
 		// unused
 		rules.set_s8("team_wins_on_end", team_wins_on_end);
