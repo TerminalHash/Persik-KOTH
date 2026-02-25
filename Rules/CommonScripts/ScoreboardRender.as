@@ -1029,7 +1029,7 @@ void onRenderScoreboard(CRules@ this) {
 	ScoreboardField(
 		Vec2f(screenWidth - tl.x - 200, 115 - scrollOffset),
 		Vec2f(screenWidth - tl.x,       115 - scrollOffset + 40),
-		Descriptions::currentversiontext + mod_version
+		Descriptions::currentversiontext + mod_version + "\n(3.5pre)"
 	);
 	LinkButton(
 		Vec2f(screenWidth - tl.x - 275, 115 - scrollOffset),
